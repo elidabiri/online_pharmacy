@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+# Online Pharmacy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React + TypeScript app that lists medications, lets you search by name, manufacturer, and description, and sort the list by price. Data is loaded from a static JSON file served with the app.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Browse medications in a table (name, price, manufacturer, description)
+- Filter by name, manufacturer, and description
+- Sort by price (default, low to high, high to low)
+- Loading and error states when fetching data
+- Unit tests (React Testing Library + Jest)
 
-### `npm start`
+## Tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Create React App](https://create-react-app.dev/) (React 19, TypeScript)
+- ESLint (`react-app`, `eslint-config-prettier`)
+- Prettier
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (LTS recommended; includes `npm`)
 
-### `npm run build`
+### Install and run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/YOUR_USERNAME/online-pharmacy.git
+cd online-pharmacy
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app opens at [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Data
 
-### `npm run eject`
+Medications are read from [`public/products.json`](public/products.json) via `fetch("/products.json")`. Edit that file to change the catalog in development and production builds.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Scripts
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Command           | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `npm start`       | Dev server with hot reload                       |
+| `npm test`        | Jest in watch mode (`--watchAll=false` for CI)   |
+| `npm run build`   | Production build in `build/`                     |
+| `npm run lint`    | ESLint on `src` and `server` (if present)        |
+| `npm run format`  | Prettier write on `src` and `server`             |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project layout
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+src/
+  App.tsx              # Page layout, fetch, filter/sort state
+  components/          # Filters, Sort, MedicationsList
+  services/api.ts      # Fetch and parse medications
+  types/               # Medication type
+  utils/filterSort.ts  # Filter and sort helpers
+  tests/               # Component and App tests
+public/
+  products.json        # Medication data
+```
 
-## Learn More
+## Tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm test -- --watchAll=false
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Update snapshots after intentional UI changes:
+
+```bash
+npm test -- --watchAll=false -u
+```
+
+## Deploying to GitHub Pages (optional)
+
+1. In `package.json`, set the `homepage` field to your GitHub Pages URL, for example:
+
+   `"homepage": "https://YOUR_USERNAME.github.io/online-pharmacy"`
+
+2. Install a static deploy helper (e.g. `gh-pages`) and add a `deploy` script that publishes the `build` folder, **or** use GitHub Actions to run `npm run build` and upload `build/` to the `gh-pages` branch.
+
+3. In the repo **Settings → Pages**, choose the branch/folder your host uses (often `gh-pages` or `main` with `/docs`).
+
+Because this app loads `/products.json` with a root-relative URL, the `homepage` setting helps CRA emit correct asset paths for a project site under `https://username.github.io/repo-name/`.
+
+## License
+
+This project is for demonstration purposes. Add a license file if you want to specify terms (e.g. MIT).
