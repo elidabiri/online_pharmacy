@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Filters +++ Filters --- Snapshot 1`] = `
+<div>
+  <fieldset
+    class="filters"
+  >
+    <legend>
+      Search
+    </legend>
+    <div
+      class="filters_grid"
+    >
+      <label
+        class="filters_field"
+      >
+        Name
+        <input
+          autocomplete="off"
+          placeholder="Name"
+          type="search"
+          value=""
+        />
+      </label>
+      <label
+        class="filters_field"
+      >
+        Manufacturer
+        <input
+          autocomplete="off"
+          placeholder="Manufacturer"
+          type="search"
+          value=""
+        />
+      </label>
+      <label
+        class="filters_field"
+      >
+        Description
+        <input
+          autocomplete="off"
+          placeholder="Description"
+          type="search"
+          value=""
+        />
+      </label>
+    </div>
+  </fieldset>
+</div>
+`;

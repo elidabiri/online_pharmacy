@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> MedicationsList empty or with items +++ MedicationsList --- Snapshot empty 1`] = `
+<div>
+  <p
+    class="empty-list"
+  >
+    There is no medications
+  </p>
+</div>
+`;
+
+exports[`>>> MedicationsList empty or with items +++ MedicationsList --- Snapshot with rows 1`] = `
+<div>
+  <div
+    class="table-wrap"
+  >
+    <table
+      class="med-table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Price
+          </th>
+          <th>
+            Manufacturer
+          </th>
+          <th>
+            Description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Aspirin
+          </td>
+          <td>
+            $
+            12.50
+          </td>
+          <td>
+            PharmaCo
+          </td>
+          <td
+            class="med-table_desc"
+          >
+            Pain relief
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Vitamin D
+          </td>
+          <td>
+            $
+            8.99
+          </td>
+          <td>
+            HealthInc
+          </td>
+          <td
+            class="med-table_desc"
+          >
+            Supplement
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

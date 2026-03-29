@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`>>> Sort +++ Sort asc --- Snapshot 1`] = `
+<div>
+  <div
+    class="sort"
+  >
+    <label
+      for="price-sort"
+    >
+      Sort by price
+    </label>
+    <select
+      id="price-sort"
+    >
+      <option
+        value="none"
+      >
+        Default order
+      </option>
+      <option
+        value="asc"
+      >
+        Low to high
+      </option>
+      <option
+        value="desc"
+      >
+        High to low
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`>>> Sort +++ Sort default --- Snapshot 1`] = `
+<div>
+  <div
+    class="sort"
+  >
+    <label
+      for="price-sort"
+    >
+      Sort by price
+    </label>
+    <select
+      id="price-sort"
+    >
+      <option
+        value="none"
+      >
+        Default order
+      </option>
+      <option
+        value="asc"
+      >
+        Low to high
+      </option>
+      <option
+        value="desc"
+      >
+        High to low
+      </option>
+    </select>
+  </div>
+</div>
+`;
