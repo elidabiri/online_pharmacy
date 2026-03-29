@@ -42,6 +42,7 @@ via `fetch("/products.json")`
 
 ## Project layout
 
+```
 src/
   App.tsx              # Page layout, fetch, filter/sort state
   components/          # Filters, Sort, MedicationsList
@@ -51,7 +52,7 @@ src/
   tests/               # Component and App tests
 public/
   products.json        # Medication data
-
+```
 
 ## License
 MIT
