@@ -25,12 +25,6 @@
     "lint": "eslint \"src/**/*.{ts,tsx}\" \"server/**/*.ts\"",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"server/**/*.ts\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
