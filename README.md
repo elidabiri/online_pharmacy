@@ -10,32 +10,25 @@ A small React + TypeScript app that lists medications, lets you search by name, 
 - Loading and error states when fetching data
 - Unit tests (React Testing Library + Jest)
 
-## Tech stack
 
-- [Create React App](https://create-react-app.dev/) (React 19, TypeScript)
-- ESLint (`react-app`, `eslint-config-prettier`)
-- Prettier
 
 ## Getting started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (LTS recommended; includes `npm`)
 
 ### Install and run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/online-pharmacy.git
+git clone git@github.com:elidabiri/online_pharmacy.git
 cd online-pharmacy
 npm install
 npm start
 ```
 
-The app opens at [http://localhost:3000](http://localhost:3000).
+The app opens at [http://localhost:3000]
 
 ### Data
 
-Medications are read from [`public/products.json`](public/products.json) via `fetch("/products.json")`. Edit that file to change the catalog in development and production builds.
+Medications are read from [`public/products.json`]
+via `fetch("/products.json")`
 
 ## Scripts
 
@@ -49,7 +42,6 @@ Medications are read from [`public/products.json`](public/products.json) via `fe
 
 ## Project layout
 
-```
 src/
   App.tsx              # Page layout, fetch, filter/sort state
   components/          # Filters, Sort, MedicationsList
@@ -59,32 +51,7 @@ src/
   tests/               # Component and App tests
 public/
   products.json        # Medication data
-```
 
-## Tests
-
-```bash
-npm test -- --watchAll=false
-```
-
-Update snapshots after intentional UI changes:
-
-```bash
-npm test -- --watchAll=false -u
-```
-
-## Deploying to GitHub Pages (optional)
-
-1. In `package.json`, set the `homepage` field to your GitHub Pages URL, for example:
-
-   `"homepage": "https://YOUR_USERNAME.github.io/online-pharmacy"`
-
-2. Install a static deploy helper (e.g. `gh-pages`) and add a `deploy` script that publishes the `build` folder, **or** use GitHub Actions to run `npm run build` and upload `build/` to the `gh-pages` branch.
-
-3. In the repo **Settings → Pages**, choose the branch/folder your host uses (often `gh-pages` or `main` with `/docs`).
-
-Because this app loads `/products.json` with a root-relative URL, the `homepage` setting helps CRA emit correct asset paths for a project site under `https://username.github.io/repo-name/`.
 
 ## License
-
-This project is for demonstration purposes. Add a license file if you want to specify terms (e.g. MIT).
+MIT
